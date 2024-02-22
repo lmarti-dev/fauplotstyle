@@ -1,6 +1,8 @@
 import os
-from matplotlib import font_manager
+from matplotlib import font_manager, colormaps
+from matplotlib.colors import LinearSegmentedColormap
 import matplotlib.pyplot as plt
+
 
 HOME = os.path.dirname(__file__)
 
@@ -9,6 +11,7 @@ def use_style(style_name: str = None):
     if style_name is None:
         style_name = "default_new_style"
     STYLES[style_name]()
+    add_fau_cmap()
 
 
 def default_new_style():
@@ -20,6 +23,17 @@ def default_new_style():
     plt.rcParams["font.sans-serif"] = prop.get_name()
 
     plt.style.use(os.path.join(HOME, "styles/default_new_style.mplstyle"))
+
+
+def add_fau_cmap():
+    colors = [
+        "#228848",
+        "#0061A0",
+        "#AAC3D1",
+        "#971B2F",
+    ]
+    fau_cmap = LinearSegmentedColormap.from_list("faucmap", colors)
+    colormaps.register(cmap=fau_cmap)
 
 
 STYLES = {"default_new_style": default_new_style}
