@@ -14,13 +14,16 @@ def use_style(style_name: str = None):
     add_fau_cmap()
 
 
-def default_new_style():
+def set_default_font():
     font_path = os.path.join(HOME, "fonts/Roboto/Roboto-Regular.ttf")
     font_manager.fontManager.addfont(font_path)
     prop = font_manager.FontProperties(fname=font_path)
 
     plt.rcParams["font.family"] = "sans-serif"
     plt.rcParams["font.sans-serif"] = prop.get_name()
+
+
+def default_new_style():
 
     plt.style.use(os.path.join(HOME, "styles/default_new_style.mplstyle"))
 
