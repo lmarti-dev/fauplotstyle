@@ -39,7 +39,7 @@ def add_fau_cmap():
     fau_cmap = LinearSegmentedColormap.from_list("fau_cmap", colors)
 
     # can't register a colormap twice
-    if "fau_cmap" in ColormapRegistry:
+    if "fau_cmap" in colormaps:
         pass
     else:
         colormaps.register(cmap=fau_cmap)
