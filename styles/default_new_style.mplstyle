@@ -10,3 +10,4 @@ figure.titlesize: 9
 axes.prop_cycle: cycler('color', ['228848', 'E87722', '0061A0', '971B2F', '5F7CA3', 'AAC3D1', 'FFD271', '5FC5EC','89CD79','DC697C','41748D','041E42'])
 figure.figsize:   3.41667,2.11161818834
 text.usetex: True
+axes.grid: True
