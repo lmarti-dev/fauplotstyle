@@ -1,6 +1,7 @@
 import os
 from matplotlib import font_manager, colormaps
 from matplotlib.colors import LinearSegmentedColormap
+from matplotlib.cm import ColormapRegistry
 import matplotlib.pyplot as plt
 
 
@@ -35,8 +36,13 @@ def add_fau_cmap():
         "#AAC3D1",
         "#971B2F",
     ]
-    fau_cmap = LinearSegmentedColormap.from_list("faucmap", colors)
-    colormaps.register(cmap=fau_cmap)
+    fau_cmap = LinearSegmentedColormap.from_list("fau_cmap", colors)
+
+    # can't register a colormap twice
+    if "fau_cmap" in colormaps:
+        pass
+    else:
+        colormaps.register(cmap=fau_cmap)
 
 
 STYLES = {"default_new_style": default_new_style}
