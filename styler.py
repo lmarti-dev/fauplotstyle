@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 HOME = os.path.dirname(__file__)
 
 
-def use_style(style_name: str = None):
+def style(style_name: str = None):
     if style_name is None:
         style_name = "default_new_style"
     STYLES[style_name]()

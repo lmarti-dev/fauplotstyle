@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 
 import numpy as np
 
-from fauplotstyle.styler import use_style
+from fauplotstyle.styler import style
 
 
 def test_default_plot4():
-    use_style()
+    style()
     fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(ncols=2, nrows=2)
     axes = (ax1, ax2, ax3, ax4)
     for ax in axes:
@@ -24,7 +24,7 @@ def test_default_plot4():
 
 
 def test_default_plot2():
-    use_style()
+    style()
     fig, (ax1, ax2) = plt.subplots(nrows=2)
     axes = (ax1, ax2)
     for ax in axes:

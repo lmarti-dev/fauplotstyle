@@ -11,3 +11,5 @@ axes.prop_cycle: cycler('color', ['228848', 'E87722', '0061A0', '971B2F', '5F7CA
 figure.figsize:   3.41667,2.11161818834
 text.usetex: True
 axes.grid: True
+grid.linewidth: 0.5
+grid.alpha: 0.5
