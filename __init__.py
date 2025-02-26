@@ -1,4 +1,4 @@
-from styler import style
+from .styler import style
 
 
 __all__ = ["style"]
