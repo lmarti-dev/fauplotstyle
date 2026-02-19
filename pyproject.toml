@@ -1,0 +1,16 @@
+[project]
+name = "fauplotstyle"
+version = "0.1.0"
+description = "Plot style for my papers"
+readme = "README.md"
+authors = [
+    { name = "lmarti", email = "lucas.marti@fau.de" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.10.8",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.24,<0.9.0"]
+build-backend = "uv_build"
