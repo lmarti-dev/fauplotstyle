@@ -13,6 +13,4 @@ text.usetex: True
 axes.grid: True
 grid.linewidth: 0.5
 grid.alpha: 0.5
-errorbar.fmt: "o--"
-errorbar.linewidth: 0.75
 errorbar.capsize: 1
