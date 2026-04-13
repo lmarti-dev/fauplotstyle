@@ -6,7 +6,6 @@ from datetime import datetime
 from pathlib import Path
 
 def save_figure(
-    self,
     fig: plt.Figure,
     dirname: Path,
     filename: str=None,
@@ -29,7 +28,7 @@ def save_figure(
         ts = datetime.today().strftime(r"%Y_%m_%d_%H_%M_%S")
         filename = filename + ts
     
-    figure_fpath= Path(dirname,filename)
+    figure_fpath= Path(dirname,filename + ".pdf")
     # saving the figure
     # the figure needs to be saved after the data as sometimes
     # one gets a TypeError from a faulty cache
@@ -64,5 +63,5 @@ def save_figure(
     elif fig_shape == "double-size":
         figsize = (figsize[0] * 2, figsize[1] * 2)
     fig.set_size_inches(figsize[0], figsize[1])
-    fig.savefig(figure_fpath, format="pdf", bbox_inches=bbox_inches, pad_inches=0.01)
+    fig.savefig(figure_fpath , format="pdf", bbox_inches=bbox_inches, pad_inches=0.01)
     print("saved figure to {}".format(figure_fpath))
