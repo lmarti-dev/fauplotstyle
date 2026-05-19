@@ -4,6 +4,21 @@ from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.cm import ColormapRegistry
 import matplotlib.pyplot as plt
 
+COLOR_LIST = [
+    "#228848",
+    "#E87722",
+    "#0061A0",
+    "#971B2F",
+    "#5F7CA3",
+    "#AAC3D1",
+    "#FFD271",
+    "#5FC5EC",
+    "#89CD79",
+    "#DC697C",
+    "#41748D",
+    "#041E42",
+]
+
 
 HOME = os.path.dirname(__file__)
 
@@ -25,7 +40,6 @@ def set_default_font():
 
 
 def default_new_style():
-
     plt.style.use(os.path.join(HOME, "styles/default_new_style.mplstyle"))
 
 
